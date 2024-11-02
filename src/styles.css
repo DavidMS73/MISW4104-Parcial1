@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Leckerli+One&display=swap");
+
+h1 {
+  font-family: "Kaisei Decol", sans-serif;
+}
