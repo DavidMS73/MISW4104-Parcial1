@@ -9,12 +9,20 @@ import { PlantService } from './plant.service';
 })
 export class PlantComponent implements OnInit {
   plants: Array<Plant> = [];
+  totalExteriorPlants: number = 0;
+  totalInteriorPlants: number = 0;
 
   constructor(private plantService: PlantService) {}
 
   getPlants() {
     this.plantService.getPlants().subscribe((plants) => {
       this.plants = plants;
+      this.totalExteriorPlants = plants.filter(
+        (plant) => plant.tipo === 'Exterior'
+      ).length;
+      this.totalInteriorPlants = plants.filter(
+        (plant) => plant.tipo === 'Interior'
+      ).length;
     });
   }
 
