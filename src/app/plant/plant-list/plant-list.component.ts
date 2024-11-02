@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Plant } from './plant';
-import { PlantService } from './plant.service';
+import { PlantService } from '../services/plant.service';
+import { Plant } from '../plant';
 
 @Component({
-  selector: 'app-plant',
-  templateUrl: './plant.component.html',
-  styleUrls: ['./plant.component.css'],
+  selector: 'app-plant-list',
+  templateUrl: './plant-list.component.html',
+  styleUrls: ['./plant-list.component.css'],
 })
-export class PlantComponent implements OnInit {
+export class PlantListComponent implements OnInit {
   plants: Array<Plant> = [];
   totalExteriorPlants: number = 0;
   totalInteriorPlants: number = 0;

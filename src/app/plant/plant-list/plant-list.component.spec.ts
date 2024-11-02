@@ -1,21 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { PlantListComponent } from './plant-list.component';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 import { faker } from '@faker-js/faker';
-import { PlantComponent } from './plant.component';
-import { PlantService } from './plant.service';
-import { Plant } from './plant';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideHttpClient } from '@angular/common/http';
+import { PlantService } from '../services/plant.service';
+import { Plant } from '../plant';
 
-describe('PlantComponent', () => {
-  let component: PlantComponent;
-  let fixture: ComponentFixture<PlantComponent>;
+describe('PlantListComponent', () => {
+  let component: PlantListComponent;
+  let fixture: ComponentFixture<PlantListComponent>;
   let debug: DebugElement;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PlantComponent],
+      declarations: [PlantListComponent],
       providers: [
         PlantService,
         provideHttpClient(),
@@ -25,7 +25,7 @@ describe('PlantComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PlantComponent);
+    fixture = TestBed.createComponent(PlantListComponent);
     component = fixture.componentInstance;
     component.plants = [
       new Plant(
